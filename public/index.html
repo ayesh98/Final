@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="AirPnP where you can book your favourite trips"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+   
+    <script
+      src="https://kit.fontawesome.com/a6f665c914.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>AirPnP</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, options);
+      });
+      $(document).ready(function() {
+        $('.sidenav').sidenav();
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        // Init Slider
+        $('.slider').slider({
+          indicators: false,
+          height: 500,
+          transition: 500,
+          interval: 6000
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, options);
+      });
+
+      $(document).ready(function() {
+        $('.carousel.carousel-slider').carousel({
+          height: 500,
+          indicators: true,
+          fullWidth: true,
+          transition: 500,
+          interval: 6000
+        });
+      
+
+        $('.autocomplete').autocomplete({
+          data: {
+            Cuba: null,
+            Cancun: null,
+            Hawaii: null,
+            Florida: null,
+            California: null,
+            Jamaica: null,
+            Europe: null,
+            Bahamas: null
+          }
+        });
+
+        // Init Scrollspy
+        $('.scrollspy').scrollSpy();
+
+        $('.materialboxed').materialbox();
+
+        $('input#input_text, textarea#message').characterCounter();
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.fixed-action-btn');
+        var instances = M.FloatingActionButton.init(elems, options);
+      });
+
+      // Or with jQuery
+
+      $(document).ready(function() {
+        $('.fixed-action-btn').floatingActionButton();
+      });
+    </script>
+  </body>
+</html>
